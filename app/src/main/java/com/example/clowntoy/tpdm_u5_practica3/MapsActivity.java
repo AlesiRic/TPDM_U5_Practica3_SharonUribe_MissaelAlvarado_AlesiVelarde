@@ -12,6 +12,7 @@ import com.google.android.gms.maps.model.IndoorBuilding;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolygonOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -46,6 +47,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         anadirMarcadores(mMap);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(21.478648, -104.866163)));
+
+        IndoorBuilding[] buildings=new IndoorBuilding[6];
+
+
 
         mMap.setMinZoomPreference(17);
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
@@ -94,32 +99,82 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .title("Edificio UD")
                 .visible(true)
         );
+        map.addPolygon(new PolygonOptions().add(new LatLng(21.478500, -104.865789),
+                new LatLng(21.478418, -104.865539),
+                new LatLng(21.478583, -104.865476),
+                new LatLng(21.478666, -104.865724)));
+
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(21.478540,-104.865645))
                 .title("Edificio Administrativo")
                 .visible(true)
         );
+
+        map.addPolygon(new PolygonOptions().add(new LatLng(21.478500, -104.865789),
+                new LatLng(21.478418, -104.865539),
+                new LatLng(21.478583, -104.865476),
+                new LatLng(21.478666, -104.865724)));
+
+
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(21.477605,-104.866940))
                 .title("Edificio BC 'Bastón'")
                 .visible(true)
         );
+
+        map.addPolygon(new PolygonOptions().add(new LatLng(21.477702, -104.866424),
+                new LatLng(21.477741, -104.866542),
+                new LatLng(21.477645, -104.866579),
+                new LatLng(21.477615, -104.866615),
+                new LatLng(21.477599, -104.866671),
+                new LatLng(21.477609, -104.866728),
+                new LatLng(21.477811, -104.867341),
+                new LatLng(21.477700, -104.867382),
+                new LatLng(21.477491, -104.866719),
+                new LatLng(21.477490, -104.866647),
+                new LatLng(21.477499, -104.866603),
+                new LatLng(21.477522, -104.866548),
+                new LatLng(21.477557, -104.866483),
+                new LatLng(21.477610, -104.866457)));
+
+
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(21.478010, -104.867116))
                 .title("Laboratorio de cómputo")
                 .visible(true)
         );
+
+        map.addPolygon(new PolygonOptions().add(new LatLng(21.477856, -104.867066),
+                new LatLng(21.478110, -104.866967),
+                new LatLng(21.478206, -104.867252),
+                new LatLng(21.47952, -104.867351)));
+
+
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(21.478573, -104.865143))
                 .title("Centro de información")
                 .visible(true)
         );
+
+        map.addPolygon(new PolygonOptions().add(new LatLng(21.478496, -104.865396),
+                new LatLng(21.478760, -104.865292),
+                new LatLng(21.478635, -104.864910),
+                new LatLng(21.478369, -104.865017)));
+
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(21.478166, -104.867915))
                 .title("Edificio UVP")
                 .visible(true)
         );
+
+        map.addPolygon(new PolygonOptions().add(new LatLng(21.478299, -104.867701),
+                new LatLng(21.478272, -104.868130),
+                new LatLng(21.478064, -104.868115),
+                new LatLng(21.478091, -104.867687)));
+
     }
+
+
 
 
 
